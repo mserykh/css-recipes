@@ -48,7 +48,7 @@ ul {
 
 .clearfix::after {
     content: "";
-    display: table;
+    display: block;
     clear: both;
 }
 
@@ -137,7 +137,7 @@ ul {
     color: #ffffff;
 }
 
-.contacts__item, .contacts__mail, .contacts__tel, .contacts__icon {
+.contacts__item, .contacts__mail, .contacts__tel, .contacts__icon, .contacts__address {
     color: #ffffff;
 }
 
@@ -158,28 +158,35 @@ ul {
 }
 
 .page-content__inner {
-    display: table;
-    background-color: #f5f5f5;
+    display: block;
+    overflow: hidden;
 }
 
-.portfolio {
-    margin-right: -30px;
-}
+
 
 .column {
-    display: table-cell;
-    padding-top: 40px;
-
+    padding-top: 60px;
 }
+
 .column-left {
-    width: 34%;
+    float: left;
+    width: 35%;
     padding-left: 80px;
     padding-right: 20px;
+    background-color: #f5f5f5; 
 }
 
 .column-right {
-    padding: 0 80px;
+    float: right;
+    width: 65%;
+    padding-left: 80px;
+    padding-right: 20px;
     background-color: #ffffff;
+}
+
+.column-left, .column-right {
+    padding-bottom: 99999px;
+    margin-bottom: -99999px;
 }
 
 .section {
@@ -195,7 +202,6 @@ ul {
     float: left;
     width: 30%;
     font-weight: 700;
-    padding-right: 20px;
     margin-top: 94px;
     text-align: center;
 }
@@ -208,7 +214,6 @@ ul {
     height: 58px;
     border: 5px solid #4c5eab;
     border-radius: 50%;
-    margin-left: -15px;
     top: -84px;
     left: 50%;
     transform: translateX(-50%);
@@ -300,10 +305,6 @@ ul {
     line-height: 30px;
 }
 
-.awards__item:hover {
-    color: #4c5eab;
-}
-
 .portfolio-list {
     width: 100%;
     padding-top: 10px;
@@ -385,18 +386,18 @@ ul {
     padding: 0 80px;
 }
 
-  .contacts__mail, .footer__mail, .contacts__tel, .footer__tel {
+  .contacts__mail, .footer__mail, .contacts__tel, .footer__tel, .contacts__address {
     background: linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
     background-position: 0 100%;
     background-repeat: repeat-x;
     background-size: 2px 2px;
     color: #ffffff;
     text-decoration: none;
-    transition: background-size .3s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: background-size .5s cubic-bezier(0.77, 0, 0.175, 1);
 }
   
-  .contacts__mail:hover, .footer__mail:hover, .contacts__tel:hover, .footer__tel:hover {
+  .contacts__mail:hover, .footer__mail:hover, .contacts__tel:hover, .footer__tel:hover, .contacts__address:hover {
     background-size: 4px 25px;
     color: #4c5eab;
-    transition: background-size .3s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: background-size .5s cubic-bezier(0.77, 0, 0.175, 1);
 }
